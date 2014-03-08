@@ -145,10 +145,10 @@ copyfolder() {
   cd ${ASMACK_BASE}
   (
     cd "${1}"
-    tar -cSsp --exclude-vcs "${3}"
+    tar -cSp --exclude-vcs "${3}"
   ) | (
     cd "${2}"
-    tar -xSsp
+    tar -xSp
   )
   wait
 }
@@ -459,8 +459,8 @@ execute() {
 
 setdefaults() {
     # Default configuration, can be changed with script arguments
-    SMACK_REPO=git://github.com/Flowdalic/smack.git
-    SMACK_BRANCH=master
+    SMACK_REPO=git://github.com/rumr/smack.git
+    SMACK_BRANCH=3.4.0-bookmarksfix
     SMACK_LOCAL=false
     UPDATE_REMOTE=true
     BUILD_CUSTOM=false
